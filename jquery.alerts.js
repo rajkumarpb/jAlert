@@ -1,6 +1,6 @@
 // jQuery Alert Dialogs Plugin
 //
-// Version 1.1
+// Version 1.1.1
 //
 // Cory S.N. LaViska
 // A Beautiful Site (http://abeautifulsite.net/)
@@ -18,6 +18,7 @@
 //		1.00 - Released (29 December 2008)
 //
 //		1.01 - Fixed bug where unbinding would destroy all resize events
+//      1.1.1 - Added Custom Confirm Dialog!
 //
 // License:
 // 
@@ -55,6 +56,15 @@
 				if( callback ) callback(result);
 			});
 		},
+		
+		customConfirm: function(message, title, okButton, cancelButton, callback) {
+			if( title == null ) title = 'Confirm';
+			if(okButton!=undefined || okButton!=null) $.alerts.okButton = '&nbsp;'+okButton+'&nbsp';
+			if(cancelButton!=undefined || cancelButton!=null) $.alerts.cancelButton = '&nbsp;'+cancelButton+'&nbsp';
+			$.alerts._show(title, message, null, 'confirm', function(result) {
+				if( callback ) callback(result);
+			});
+		},
 			
 		prompt: function(message, value, title, callback) {
 			if( title == null ) title = 'Prompt';
@@ -81,7 +91,7 @@
 			if( $.alerts.dialogClass ) $("#popup_container").addClass($.alerts.dialogClass);
 			
 			// IE6 Fix
-			var pos = ($.browser.msie && parseInt($.browser.version) <= 6 ) ? 'absolute' : 'fixed'; 
+			var pos = 'fixed'; 
 			
 			$("#popup_container").css({
 				position: pos,
@@ -195,7 +205,7 @@
 			if( left < 0 ) left = 0;
 			
 			// IE6 fix
-			if( $.browser.msie && parseInt($.browser.version) <= 6 ) top = top + $(window).scrollTop();
+			//if( $.browser.msie && parseInt($.browser.version) <= 6 ) top = top + $(window).scrollTop();
 			
 			$("#popup_container").css({
 				top: top + 'px',
@@ -217,15 +227,19 @@
 			}
 		}
 		
-	}
+	};
 	
-	// Shortuct functions
+	// Shortcut functions
 	jAlert = function(message, title, callback) {
 		$.alerts.alert(message, title, callback);
-	}
+	};
 	
 	jConfirm = function(message, title, callback) {
 		$.alerts.confirm(message, title, callback);
+	};
+	
+	jCustomConfirm = function(message, title, okButton, cancelButton, callback) {
+		$.alerts.customConfirm(message, title, okButton, cancelButton, callback);
 	};
 		
 	jPrompt = function(message, value, title, callback) {
