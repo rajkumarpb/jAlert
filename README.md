@@ -1,10 +1,14 @@
 # jAlert
 
+I am not the author of this plugin. I just found it somewhere and thought it can be helpful for people like me!
+
+This plugin is dual-licensed under the GNU General Public License and the MIT License and is copyright 2008 A Beautiful Site, LLC. 
+
 This is just an fork of the work from ( http://labs.abeautifulsite.net/archived/jquery-alerts/)
 Since it isn't available in github and replaced with better one, I thought of put it here.
 
 Demo : http://labs.abeautifulsite.net/archived/jquery-alerts/demo/
- 
+
 Setup
 ======
 
