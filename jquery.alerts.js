@@ -3,6 +3,7 @@
 // Version 1.1.1
 //
 // Cory S.N. LaViska
+// Rajkumar
 // A Beautiful Site (http://abeautifulsite.net/)
 // 14 May 2009
 //
@@ -15,10 +16,9 @@
 // 
 // History:
 //
-//		1.00 - Released (29 December 2008)
-//
-//		1.01 - Fixed bug where unbinding would destroy all resize events
-//      1.1.1 - Added Custom Confirm Dialog!
+//      1.00 - Released (29 December 2008)
+//	1.01 - Fixed bug where unbinding would destroy all resize events
+//      1.1.1 - Added Custom Confirm Dialog!(29 Jan 2016)
 //
 // License:
 // 
