@@ -38,5 +38,5 @@ jAlert('You can use HTML, such as bold, italics, and underline!');
 jCustomConfirm('Can you confirm this custom dialog?', 'Confirm Header', 'Think about it', 'Maybe Later');
 ```
 
-You can even change the style dynamically. Just check out the demo page! This jAlert might not win beauty contest, but this is lot easier to use, looks like browser alert and smaller in size! Contributors are welcome!
+You can even change the style dynamically. Just check out the demo page! This jAlert might not win beauty contest, but this is lot easier to use, looks like browser alert and smaller in size(~6KB js & css files combined)! Contributors are welcome!
 
