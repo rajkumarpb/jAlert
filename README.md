@@ -18,6 +18,28 @@ Include the CSS/JS files somewhere in the page(js should be after jQuery! Duh!)
 <link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
 ```
 
+Angular Alert
+=============
+
+Add the dependency in module
+
+````html
+angular.module('appName', ['jalert'])
+````
+
+And you can use it like 
+````html
+<input type="button" name="Click Me!" value="Click" jalert jalert-type="confirm" jalert-message="This is message!" jcallback="testCallBack()"/>
+````
+if you need regular alert without any callback, call like this
+````html
+<input type="button" name="Click Me!" value="Click" jalert="This is message!"/>
+````
+Normal alert with Callback, then call like this
+````html
+<input type="button" name="Click Me!" value="Click" jalert="This is message!" jcallback="testCallBack()"/>
+````
+
 Quick Use 
 ==========
 ```html
