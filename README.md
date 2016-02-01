@@ -23,7 +23,7 @@ Angular Alert
 
 Add the dependency in module
 
-````html
+````js
 angular.module('appName', ['jalert'])
 ````
 
@@ -42,7 +42,7 @@ Normal alert with Callback, then call like this
 
 Quick Use 
 ==========
-```html
+```js
 jAlert('This is a custom alert box', 'Alert Dialog');
 
 jConfirm('Can you confirm this?', 'Confirmation Dialog', function(r) {
