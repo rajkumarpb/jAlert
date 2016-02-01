@@ -18,7 +18,7 @@ Include the CSS/JS files somewhere in the page(js should be after jQuery! Duh!)
 <link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
 ```
 
-Quick Use :
+Quick Use 
 ==========
 ```html
 jAlert('This is a custom alert box', 'Alert Dialog');
@@ -42,7 +42,7 @@ jCustomConfirm('Can you confirm this custom dialog?', 'Confirm Header', 'Think a
 
 You can even change the style dynamically. Just check out the demo page! This jAlert might not win beauty contest, but this is lot easier to use, looks like browser alert and smaller in size(~6KB js & css files combined)! Contributors are welcome!
 
-License :
+License 
 =========
 This plugin is dual-licensed under the GNU General Public License and the MIT License and is copyright 2008 A Beautiful Site, LLC.
 
