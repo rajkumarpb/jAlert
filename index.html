@@ -55,39 +55,36 @@
 
 <p>jAlert plugin has regular Alert, prompt and confirm. You can add HTML's inside the message, modify the styles dynamically based on the pages/modules as you wish. It is that easy!</p>
 
-<p>Ways to call different jAlert</p>
-
-<p>Regular Alert</p>
+<p><em>Regular Alert</em></p>
 
 <pre><code>jAlert('This is a custom alert box', 'Alert Dialog');
 </code></pre>
 
-<p>Prompt</p>
+<p><em>Prompt</em></p>
 
 <pre><code>jPrompt('Type something:', 'Prefilled value', 'Prompt Dialog', function(r) {
  if( r ) alert('You entered ' + r);
 });
 </code></pre>
 
-<p>Confirm</p>
+<p><em>Confirm</em></p>
 
 <pre><code>jConfirm('Can you confirm this?', 'Confirmation Dialog', function(r) {
  jAlert('Confirmed: ' + r, 'Confirmation Results');
 });
 </code></pre>
 
-<p>With HTML</p>
+<p><em>With HTML</em></p>
 
 <pre><code>jAlert('You can use HTML, such as bold, italics, and underline!');
 </code></pre>
 
-<p>Custom Confirm(Add your own button name, wherever you need instead of plain OK &amp; Cancel!)</p>
+<p><em>Custom Confirm</em>(Add your own button name, wherever you need instead of plain OK &amp; Cancel!)</p>
 
 <pre><code>jCustomConfirm('Can you confirm this custom dialog?', 'Confirm Header', 'Think about it', 'Maybe Later');
 </code></pre>
 
-<p>Dynamic Styling
-Write Custom CSS</p>
+<p><em>Dynamic Styling with Custom CSS</em></p>
 
 <pre><code>/* Custom dialog styles */
         #popup_container.style_1 {
