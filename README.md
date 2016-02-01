@@ -1,5 +1,7 @@
 # jAlert
 
+GitHub Project Link : http://rajkumarpb.github.io/jAlert
+
 I am not the author of this plugin. I just found it somewhere and thought it can be helpful for people like me!
 
 This plugin is dual-licensed under the GNU General Public License and the MIT License and is copyright 2008 A Beautiful Site, LLC. 
