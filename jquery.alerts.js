@@ -63,6 +63,10 @@
 			if(cancelButton!=undefined || cancelButton!=null) $.alerts.cancelButton = '&nbsp;'+cancelButton+'&nbsp';
 			$.alerts._show(title, message, null, 'confirm', function(result) {
 				if( callback ) callback(result);
+				// Once we give Custom Button Name, it will replace for all types.
+				// So we need to reset it to stock value!
+				$.alerts.okButton = '&nbsp;OK&nbsp';
+				$.alerts.cancelButton = '&nbsp;Cancel&nbsp';
 			});
 		},
 			
