@@ -9,6 +9,10 @@ Since it isn't available in github and replaced with better one, I thought of pu
 
 Demo : http://labs.abeautifulsite.net/archived/jquery-alerts/demo/
 
+### Why we need to revamp such old jquert Alert plugin?
+
+Well, not everyone has the luxury to use the cutting edge, latest bootbox or flex! For people who are restricted with older browsers, who need smaller footprint and without bootstrap, this kinda plugins help. Especially in corportate, where still IE8 is the king and devs have to bang their hand in the wall to fix so many issues, where this plugin will give nice, simple alternative to the ugly browser alert!
+
 Setup
 ======
 
