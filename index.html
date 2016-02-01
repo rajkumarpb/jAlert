@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>jAlert by rajkumarpb</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>jAlert</h1>
+          <h2>Simple &amp; Thin jQuery Alert!</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/rajkumarpb/jAlert/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/rajkumarpb/jAlert/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/rajkumarpb/jAlert" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview.</h3>
+
+<p>This is just another jQuery alert designed by @abeautifulsite and not maintained by the author. But since it seems to be the easy, neat and tiny plugin, I'm bringing it back to life from where the makers left it! The total minified file size of JS &amp; CSS is ~6KB!</p>
+
+<h3>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h3>
+
+<p>Include the CSS/JS files somewhere in the page(js should be after jQuery! Duh!)</p>
+
+<pre><code>&lt;script src="jquery.alerts.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;link href="jquery.alerts.css" rel="stylesheet" type="text/css" /&gt;
+</code></pre>
+
+<p>and call the alert like </p>
+
+<pre><code>jAlert('This is a custom alert box', 'Alert Dialog');
+</code></pre>
+
+<h3>
+<a id="type-of-alert" class="anchor" href="#type-of-alert" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type of Alert</h3>
+
+<p>jAlert plugin has regular Alert, prompt and confirm. You can add HTML's inside the message, modify the styles dynamically based on the pages/modules as you wish. It is that easy!</p>
+
+<p>Ways to call different jAlert</p>
+
+<p>Regular Alert</p>
+
+<pre><code>jAlert('This is a custom alert box', 'Alert Dialog');
+</code></pre>
+
+<p>Prompt</p>
+
+<pre><code>jPrompt('Type something:', 'Prefilled value', 'Prompt Dialog', function(r) {
+ if( r ) alert('You entered ' + r);
+});
+</code></pre>
+
+<p>Confirm</p>
+
+<pre><code>jConfirm('Can you confirm this?', 'Confirmation Dialog', function(r) {
+ jAlert('Confirmed: ' + r, 'Confirmation Results');
+});
+</code></pre>
+
+<p>With HTML</p>
+
+<pre><code>jAlert('You can use HTML, such as bold, italics, and underline!');
+</code></pre>
+
+<p>Custom Confirm(Add your own button name, wherever you need instead of plain OK &amp; Cancel!)</p>
+
+<pre><code>jCustomConfirm('Can you confirm this custom dialog?', 'Confirm Header', 'Think about it', 'Maybe Later');
+</code></pre>
+
+<p>Dynamic Styling
+Write Custom CSS</p>
+
+<pre><code>/* Custom dialog styles */
+        #popup_container.style_1 {
+            font-family: Georgia, serif;
+            color: #A4C6E2;
+            background: #005294;
+            border-color: #113F66;
+        }
+
+        #popup_container.style_1 #popup_title {
+            color: #FFF;
+            font-weight: normal;
+            text-align: left;
+            background: #76A5CC;
+            border: solid 1px #005294;
+            padding-left: 1em;
+        }
+
+        #popup_container.style_1 #popup_content {
+            background: none;
+        }
+
+        #popup_container.style_1 #popup_message {
+            padding-left: 0em;
+        }
+
+        #popup_container.style_1 INPUT[type='button'] {
+            border: outset 2px #76A5CC;
+            color: #A4C6E2;
+            background: #3778AE;
+        }
+</code></pre>
+
+<p>Assign it to any event!</p>
+
+<pre><code>// Add it for button!
+$(".alert_style_example").click( function() {
+                $.alerts.dialogClass = $(this).attr('id'); // set custom style class
+                jAlert('This is the custom class called &amp;ldquo;style_1&amp;rdquo;', 'Custom Styles', function()    {
+                    $.alerts.dialogClass = null; // reset to default
+                });
+            });
+</code></pre>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Contributors are welcome to make it look better or add anything as you wish!</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Use the github issue tracking to post all your issues!</p>
+        </section>
+
+        <footer>
+          jAlert is maintained by <a href="https://github.com/rajkumarpb">rajkumarpb</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
