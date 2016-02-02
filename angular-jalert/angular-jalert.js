@@ -32,10 +32,12 @@ jalertModule.directive('jalert', function() {
                         });
                     };
 				}else{
-                    jAlert(iElem.attr("jalert"), CONSTANTS.APP_NAME_AS_PREFIX, function(res){
-                        if(iElem.attr("jcallback")!=undefined && iElem.attr("jcallback")!='')
-                            scope.callback();
-                    });
+					if(iElem.attr("jalert")!='' && iElem.attr("jalert").length>0){
+						 jAlert(iElem.attr("jalert"), CONSTANTS.APP_NAME_AS_PREFIX, function(res){
+							if(iElem.attr("jcallback")!=undefined && iElem.attr("jcallback")!='')
+								scope.callback();
+						});
+					}                   
                 }
             scope.$on('$destroy', function() {
             	iElem.off();
