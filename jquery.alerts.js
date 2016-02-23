@@ -17,8 +17,9 @@
 // History:
 //
 //      1.00 - Released (29 December 2008)
-//	1.01 - Fixed bug where unbinding would destroy all resize events
+//	    1.01 - Fixed bug where unbinding would destroy all resize events
 //      1.1.1 - Added Custom Confirm Dialog!(29 Jan 2016)
+//      1.2.0 - Added Theme support!
 //
 // License:
 // 
@@ -35,6 +36,7 @@
 		horizontalOffset: 0,                // horizontal offset of the dialog from center screen, in pixels/
 		repositionOnResize: true,           // re-centers the dialog on window resize
 		overlayOpacity: .01,                // transparency level of overlay
+		theme: '',                          // Set theme color
 		overlayColor: '#FFF',               // base color of overlay
 		draggable: true,                    // make the dialogs draggable (requires UI Draggables plugin)
 		okButton: '&nbsp;OK&nbsp;',         // text for the OK button
@@ -86,8 +88,8 @@
 			
 			$("BODY").append(
 			  '<div id="popup_container">' +
-			    '<h1 id="popup_title"></h1>' +
-			    '<div id="popup_content">' +
+			    '<h1 id="popup_title'+$.alerts.theme+'"></h1>' +
+			    '<div id="popup_content'+$.alerts.theme+'">' +
 			      '<div id="popup_message"></div>' +
 				'</div>' +
 			  '</div>');
@@ -104,7 +106,7 @@
 				margin: 0
 			});
 			
-			$("#popup_title").text(title);
+			$("#popup_title"+$.alerts.theme).text(title);
 			$("#popup_content").addClass(type);
 			$("#popup_message").text(msg);
 			$("#popup_message").html( $("#popup_message").text().replace(/\n/g, '<br />') );
@@ -169,7 +171,7 @@
 			if( $.alerts.draggable ) {
 				try {
 					$("#popup_container").draggable({ handle: $("#popup_title") });
-					$("#popup_title").css({ cursor: 'move' });
+					$("#popup_title"+$.alerts.theme).css({ cursor: 'move' });
 				} catch(e) { /* requires jQuery UI draggables */ }
 			}
 		},
