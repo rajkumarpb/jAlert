@@ -44,6 +44,12 @@ jCustomConfirm('Can you confirm this custom dialog?', 'Confirm Header', 'Think a
 
 You can even change the style dynamically. Just check out the demo page! This jAlert might not win beauty contest, but this is lot easier to use, looks like browser alert and smaller in size(~6KB js & css files combined)! Contributors are welcome!
 
+To change **Theme**, just add 
+```js
+$.alerts.theme = '_blue';
+```
+in any html inside document.ready.
+
 **Additional Information** : It supports IE7 and above! Yay! So for anyone out there who want an simple jquery alert plugin, this is it for you! Never tested in IE6, but as per the original author, it should work in IE6 too!
 
 Angular Alert
